@@ -38,11 +38,24 @@ a, a:visited, a:hover {
   }
 }
 
-// button
+// cta button
 button, .button {
-  padding: 1rem 1.875rem;
+  padding: 0.875rem 2.1875rem;
   background: linear-gradient(to right, $lime-green, $bright-cyan);
   border-radius: 50px;
   color: $white;
   font-weight: 400;
+}
+
+// Responsive Visibility
+.hide-on-mobile {
+  @include breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.hide-on-desktop {
+  @include breakpoint-up(md) {
+    display: none;
+  }
 }
